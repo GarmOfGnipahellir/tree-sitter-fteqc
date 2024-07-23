@@ -1,0 +1,27 @@
+{
+  "name": "tree-sitter-fteqc",
+  "version": "0.0.1",
+  "description": "FTEQC grammar for tree-sitter",
+  "license": "MIT",
+  "author": "",
+  "main": "bindings/node",
+  "types": "bindings/node",
+  "keywords": [],
+  "dependencies": {
+    "nan": "^2.20.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.22.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.qc",
+      "file-types": [
+        "qc"
+      ]
+    }
+  ]
+}

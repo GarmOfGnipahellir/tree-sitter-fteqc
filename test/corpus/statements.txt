@@ -1,0 +1,18 @@
+==================
+Return statements
+==================
+
+void() main =
+{
+    return 1;
+}
+
+---
+
+(source_file
+    (function_definition
+        (primitive_type)
+        (parameter_list)
+        (identifier)
+        (block
+            (return_statement (number)))))
