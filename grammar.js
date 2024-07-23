@@ -1,8 +1,18 @@
 module.exports = grammar({
   name: "fteqc",
 
+  extras: ($) => [/\s|\r?\n/, $.comment],
+
   rules: {
     source_file: ($) => repeat($._definition),
+
+    comment: (_) =>
+      token(
+        choice(
+          repeat1(seq("//", /[^(\r?\n)]*(\r?\n)/)),
+          seq("/*", /[^*]*\*+([^/*][^*]*\*+)*/, "/")
+        )
+      ),
 
     _definition: ($) => choice($.function_definition),
 
